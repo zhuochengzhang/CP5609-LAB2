@@ -1,1 +1,2 @@
-# CP5609-LAB2
+# CP5609-Lab2
+This reprositiory is made for CP5609 Lab2.

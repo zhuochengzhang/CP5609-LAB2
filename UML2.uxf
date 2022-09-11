@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>492</x>
+      <y>36</y>
+      <w>168</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>Board Class
+-
+
+Board (int rows, int cols)
+bool setBoardOK ()
+void paint(）
+void move(char command);
+bool IamAlive()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>732</x>
+      <y>30</y>
+      <w>126</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Wall Class
+--
+
+ Wall (int start_x, int start_y)
+ void touch ()
+
+-
+
+myClass=A_WALL;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>666</x>
+      <y>276</y>
+      <w>150</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>BoardObjects Class
+--
+enum ObjectColours
+enum ObjectTypes
+get_Type()
+BoardObject (int start_x, int start_y)
+get_Color()
+touch()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>906</x>
+      <y>42</y>
+      <w>132</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Bomb Class
+--
+
+Bomb (int start_x, int start_y)
+void touch ()
+
+-
+
+ObjectColours = BLUE;
+myClass = A_Bomb;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>426</x>
+      <y>486</y>
+      <w>126</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Monster Class
+--
+
+Monster (int start_x, int start_y)
+void Monster::touch()
+
+-
+
+ObjectColours = BLUE;
+myClass = A_Monster;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>678</x>
+      <y>504</y>
+      <w>126</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>Player Class
+--
+
+ Player (int start_x, int start_y)
+ void touch ();
+
+-
+
+color1 = RED;
+color2  = BLUE;
+myClass=A_PLAYER;
+ </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>924</x>
+      <y>516</y>
+      <w>126</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Cookie Class
+--
+
+Cookie (int start_x, int start_y)
+void Cookie :: touch ()
+int Cookie :: get_value ()
+
+-
+
+color1 = YELLOW;
+color2  = BLUE;
+valueIndex=CHEAP;
+myClass=A_COOKIE;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>204</y>
+      <w>114</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>786</x>
+      <y>192</y>
+      <w>60</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>20.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>426</y>
+      <w>126</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;130.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>816</x>
+      <y>414</y>
+      <w>132</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>200.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>726</x>
+      <y>432</y>
+      <w>66</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>50.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>288</y>
+      <w>180</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>VecctorBoardObjects Class
+--
+
+vector&lt;b_BoardObject&gt;
+vector&lt;b_BoardObject&gt;::iterator
+
+-
+
+VectorBoardObjects(b_BoardObject theFirst);
+b_BoardObject theFirst();
+b_BoardObject theNext();
+void addOneObject(b_BoardObject newOne);
+void removeOneObject();
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>276</x>
+      <y>270</y>
+      <w>150</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>ListBoardObjects Class
+--
+
+vector&lt;b_BoardObject&gt;
+vector&lt;b_BoardObject&gt;::iterator
+
+-
+
+ListBoardObjects(p_BoardObject theFirst);
+
+p_BoardObject theFirst();
+p_BoardObject theNext();
+void addOne(p_BoardObject newOne);
+void removeOnePlayer();
+bool isThereAWall();
+int isCookieValue();
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>360</y>
+      <w>186</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;290.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>354</y>
+      <w>252</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>400.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>648</x>
+      <y>192</y>
+      <w>102</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>150.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>192</y>
+      <w>84</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;180.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>174</x>
+      <y>30</y>
+      <w>168</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>ValdPackManGame Class
+-
+
+void banner()
+int main(void)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>120</y>
+      <w>168</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>260.0;20.0;10.0;30.0</additional_attributes>
+  </element>
+</diagram>
